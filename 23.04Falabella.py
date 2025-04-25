@@ -8,3 +8,5 @@ elif puntos >= 500:
     print(f"Genial! {nombre} Estas en el nivel oro, tu descuento será del 10%")
 elif puntos >= 250:
     print(f"Genial {nombre} Estas en el nivel bromce, podrás acceder a diferentes premios")
+else:
+    print("Te invitamo a seguir acumulando puntos")  
