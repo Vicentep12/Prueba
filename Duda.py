@@ -19,8 +19,8 @@ print("A continuación, elige si quieres sumar (1) o restar (2)")
 operacion = int(input())
 
 if operacion == 1:
-    numero_final = resultado+numero_aleatorio
+   print(resultado+numero_aleatorio)
 elif operacion == 2:
-    numero_final = resultado-numero_aleatorio
+    print(resultado-numero_aleatorio)
 else:
-    print("Opcion no valdia.")        s
+    print("Opcion no valdia.")    
