@@ -1,0 +1,27 @@
+print("Bienvenido a subsidos de Gas el Vicho\nA continuacion ingrese sus datos para conocer su subsidio")
+quintil = int(input("Ingrese su Quintil(1 a 5): "))
+estado_laboral = int(input("Ingrese su estado laboral\n(1.Empleado) (2.Desempleado): "))
+
+if quintil == 1 or quintil == 2 and estado_laboral == 2:
+    print("Recibirás un subsidio de $10.000 ")
+elif quintil == 1 or quintil == 2 and estado_laboral == 1:
+    print("Recibirás un subsidio de $8.000")
+elif quintil == 3 and estado_laboral == 2:   
+    print("Recibirás un subsidio de $6.000") 
+elif quintil == 3 and estado_laboral == 1:
+    print("Recibirás un subsidio de $4.000") 
+elif quintil == 4 or quintil == 5 and estado_laboral == 2 or estado_laboral == 1:
+    print("Recibirás un subsidio de $1500")           
+else:
+    print("Por favor ingrese una opcion valida!")
+
+print("A continuacion Re ingrese su quintil y su edad para verificar si accede al bono:")
+quintil2 = int(input("Quintil (1 a 5): "))
+edad = int(input("Ingrese su edad: "))
+
+if (quintil2 == 1 or quintil2 == 2) and edad <= 64:
+    print("Usted recibirá un bono de $2.000")
+elif (quintil2 == 1 or quintil2 == 2) and edad >= 65:
+    print("Recibirá un bono de $5.000!")
+else:
+    print("Ingrese una opción válida!")
