@@ -25,8 +25,8 @@ if adivinar2 == numero_aleatorio:
 else:
     pista = "mayor" if adivinar2 < numero_aleatorio else "menor"
     print(f"El numero es {pista}")
-    pista_ad = "cerca en tu primer intento" if (diferencia1) >=5 else "Cerca en tu segundo intento"
-    print(f"Aqui tienes una pista adicional {pista_ad}")
+    pista_ad = "cerca en tu primer intento" if (diferencia1) >=5 else "cerca en tu segundo intento"
+    print(f"Aqui tienes una pista adicional: {pista_ad}")
 
 adivinar3 = int(input("Ingresa tu tercer intento: "))
 if adivinar3 == numero_aleatorio:
