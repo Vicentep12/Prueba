@@ -1,0 +1,44 @@
+print("Bienvenido al calculador de beneficios estudiantiles")
+print()
+print("A continuacion ingresa tu promedio final y el Quintil al que perteneces")
+promedio = float(input("Ingresa tu promedio de notas: "))
+quintil = int(input("Por favor, ingresa tu Quintil (1 al 5): "))
+
+
+descuento_ad = 90000 - 90000 + 5 /100  
+matricula = 900000
+matricula_15 =90000 - 90000 * 15 / 100
+
+arancel_20 = 1800000 - 1800000 * 20 /100
+arancel_15 = 1800000 - 1800000 * 15 /100
+arancel_13 = 1800000 - 1800000 * 13 /100
+arancel_10 = 1800000 - 1800000 * 10 /100
+
+
+if (quintil ==1 or quintil == 2) and promedio <6.0:
+    print("Recibirás un descuento del %20 en tu arancel")
+    print(f"Evalor de tu arancel será {arancel_20}")
+    print(f"Y el valor de tu matricula será: {matricula_15}")
+
+elif quintil == 3 and promedio <6.0:
+    print("Recibrás un descuento del %15 en tu arancel")
+    print(f"Evalor de tu arancel será {arancel_15}")
+    print(f"Y el valor de tu matricula será: {matricula_15}")
+
+elif quintil == 4 and promedio  <6.0:
+    print(print(f"Evalor de tu arancel será {arancel_15}"))
+    print(f"Y el valor de tu matricula será {matricula}")
+
+elif (quintil == 1 or quintil == 2 or quintil == 3) and promedio >= 5.5:
+    print(f"El valor de tu matriculá será{matricula_15} ")
+    
+elif (quintil == 1 or quintil == 2) and  5.0 < promedio <= 6.0:
+    print("Recibirás un descuento del %13 en tu arancel")
+    print(f"Evalor de tu arancel será {arancel_13}")
+
+elif (quintil == 3 or quintil == 4) and 5.0 < promedio <= 6.0:
+    print("Recibirás un descuento del %10 en tu arancel")
+    print(f"Evalor de tu arancel será {arancel_10}")
+
+else:
+    print("Opcion no valida. No se te aplicara descuento")
