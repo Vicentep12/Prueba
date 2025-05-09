@@ -1,0 +1,36 @@
+import random
+print("Bienvenido al juego de Vixots!\nPodrás adivinar en 3 intentos el numero al azar?")
+print()
+print("Primero debes ingresar 2 numeros, uno menor y otro mayor: ")
+n1 = int(input("Ingresa tu primer numero(limite inferior): "))
+n2 = int(input("Ingresa tu segundo numero(limite superior): "))
+
+numero_aleatorio = random.randint(n1, n2)
+
+
+adivinar1= int(input("Ingresa tu primero numero: "))
+if adivinar1 == numero_aleatorio:
+    print("Adivinaste en el primero intento!")
+    exit()
+else:
+    pista = "mayor" if adivinar1 < numero_aleatorio else "menor"
+    print(f"El numero es {pista}")
+
+diferencia1 = (adivinar1-numero_aleatorio)
+
+adivinar2 = int(input("Ingresa tu segundo intento: "))   
+if adivinar2 == numero_aleatorio:
+    print("Adivinaste en el segundo intento!")
+    exit()
+else:
+    pista = "mayor" if adivinar2 < numero_aleatorio else "menor"
+    print(f"El numero es {pista}")
+    pista_ad = "cerca en tu primer intento" if (diferencia1) >=5 else "Cerca en tu segundo intento"
+    print(f"Aqui tienes una pista adicional {pista_ad}")
+
+adivinar3 = int(input("Ingresa tu tercer intento: "))
+if adivinar3 == numero_aleatorio:
+    print("Adivinaste en tu tercer intento!")
+    exit()
+else:
+    print(f"Fallaste, el numero aleatorio era {numero_aleatorio}")        
