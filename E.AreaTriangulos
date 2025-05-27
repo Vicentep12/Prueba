@@ -1,0 +1,28 @@
+print("Bienvenido a la calculadora de area de triangulos")
+print("Por favor, ingresa la cantidad de triangulos para calcular: ")
+
+while True:
+    try:
+        cantidad_triangulos = int(input("Ingrese aquí: "))
+        if cantidad_triangulos >0:
+            break
+        else:
+            print("Por favor ingrese un numero entero positivo")
+    except ValueError:
+        print("Error, ingrese un numero valido")  
+
+for i in range (cantidad_triangulos):
+    print(f"Triangulo {i+1}")
+
+    while True:
+        try:
+           base = float(input("Ingrese la base del triangulo"))
+           altura = float(input("Ingrese la altura de su triangulo"))
+           if base >0 and altura >0:
+            area = (base * altura)/2
+            print(f"El area del triangulo {i+1} es: {area:.1f}")         
+            break
+           else:
+            print("Error, la base y altura deben ser numeros positivos")
+        except ValueError:
+           print("Error. Ingrese numeros enteros positivos por favor.") 
