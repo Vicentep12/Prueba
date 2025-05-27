@@ -1,0 +1,23 @@
+print("*** R E G I S T R O - T E M P E R A T U R A ***")
+
+while True:
+    print("Por favor, ingrese el registro de su temperatura\nDebe ser entre -50°C y 50°C")
+
+    try:
+        salir_registrar = input("Ingrese su temperatura o escriba 'salir' para terminar el programa: ")
+        
+        if salir_registrar == "salir":
+            print("Salida del programa. Hasta luego.")
+            break
+
+        registro_temperatura = int(salir_registrar)
+
+        if registro_temperatura < -50 or registro_temperatura > 50:
+            print("Error: fuera del rango permitido (-50°C a 50°C). Por favor, ingrese nuevamente.")
+            continue
+        
+        print(f"Temperatura ingresada correctamente: {registro_temperatura}°C")
+        break
+
+    except ValueError:
+        print("Error: debe ingresar un número entero válido.")
