@@ -1,0 +1,32 @@
+print("Bienvenido a la biblioteca de Vicente")
+print("Por favor, ingresa la información solicitada a continuación")
+
+while True:
+    try:
+        cantidad_libros = int(input("Ingrese la cantidad de libros que desea registrar (Max 4): "))
+        if cantidad_libros > 0:
+            break  
+        else:
+            print("Por favor, ingrese un número positivo.")
+    except ValueError:
+        print("Por favor, ingrese un número válido.")
+
+print("\nGracias por ingresar la cantidad de libros.\nA continuación, ingrese los títulos y cantidad de días de préstamo.")
+
+for i in range(cantidad_libros):
+    titulo = input(f"\nIngrese el título del libro {i+1}: ")
+
+    while True:
+        try:
+            dias_prestamo = int(input(f"Ingrese la cantidad de días de préstamo para '{titulo}': "))
+            if dias_prestamo > 0:
+                break  
+            else:
+                print("Por favor, ingrese un número positivo.")
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+
+    if dias_prestamo > 15:
+        print(f"El libro '{titulo}' tiene un préstamo prolongado.")
+    else:
+        print(f"El libro '{titulo}' tiene un préstamo estándar.")
