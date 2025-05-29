@@ -1,0 +1,52 @@
+print("Bienvenido a Sushi el Vixo & Xamoi")
+print("A continuacion verá nuestros rolls Disponibles")
+
+print("1.-Pikachu Roll $4500")
+print("2.-Otaku Roll $5000")
+print("3.-Pulpo Venenoso Roll $5200")
+print("4.-Anguila Eléctrica Roll $4800")
+
+total_sushi = 0
+while True:
+    try:
+        pikachu_roll=int(input("Ingrese la cantidad de rolls pikachu que desea: "))
+        otaku_roll=int(input("Ingrese la cantidad de rolls otaku que desea: "))
+        pulpo_roll=int(input("Ingrese la cantidad de pulpo rolls que desea: "))
+        anguila_electrica=int(input("Ingrese la cantidad de anguila rolls que desea: "))
+        if pikachu_roll>=0 and otaku_roll>=0 and pulpo_roll>=0 and anguila_electrica >=0:
+            print("Ingresado con exito.")
+            break
+        else:
+            print("Por favor, ingrese numeros mayores a 0. Gracias")
+            continue
+    except ValueError:
+        print("Por favor, ingrese un caracter valido.")
+        continue
+total_productos=pikachu_roll+otaku_roll+pulpo_roll+anguila_electrica
+total_sushi += pikachu_roll*4500
+total_sushi += otaku_roll*5000
+total_sushi += pulpo_roll*5200
+total_sushi += anguila_electrica*4800
+
+print("Si posee codigo de descuento, ingrese a continuación: ")
+codigo_descuento = str(input("Ingrese aquí: "))
+
+if codigo_descuento == "soyotaku":
+    descuento=total_sushi*0.1
+    total_final= total_sushi*0.9
+    print("Codigo validado con exito!")
+else:
+    print("Codigo no aplicable")
+    descuento = 0
+    total_final = total_sushi    
+
+
+print(f"Su total de productos es de {total_productos}")
+print(f"usted ha pedido {pikachu_roll} pikachu rolls")
+print(f"usted ha pedido {otaku_roll} otaku rolls")
+print(f"usted ha pedido {pulpo_roll} pulpo rolls")
+print(f"usted ha pedido {anguila_electrica} anguila rolls")
+print("**************************************")
+print(f"Subtotal {total_sushi}")
+print(f"Descuento {descuento}")
+print(f"TOTAL: {total_final}")
