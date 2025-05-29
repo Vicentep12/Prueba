@@ -1,0 +1,45 @@
+print("Bienvenido a Fondas el Vixo.")
+print("A continuacion, seleccione prodcutos y cantidad de cada uno")
+
+print("**PRODUCTOS**")
+
+print("1.-Empanada de pino $2000")
+print("2.-Empanada de queso $1500")
+print("3.-Choripan $2500")
+print("4.-Terremoto $1000")
+
+total = 0
+
+while True:
+    try:
+        empanadas_pino=int(input("Ingrese la cantidad de empanadas de pino: "))
+        empanadas_queso = int(input("Ingrese la cantidad de empanadas de queso: "))
+        choripan = int(input("Ingrese la cantidad de choripanes: "))
+        terremoto = int(input("Ingrese la cantidad de terremotos: "))
+        break
+    except ValueError:
+        print("Por favor, ingrese numeros enteros positivos.")
+
+total += empanadas_pino * 2000
+total += empanadas_queso * 1500
+total += choripan * 2500
+total += terremoto * 1000
+
+if total > 20000:
+    descuento = total * 0.40
+    mensaje = "Recibe un descuento del 40%."
+elif total > 10000:
+    descuento = total * 0.25
+    mensaje = "Recibe un descuento del 25%."
+else:
+    descuento = 0
+    mensaje = "No aplica descuento."
+
+total_final = total - descuento
+
+print(f"Total antes del descuento: ${total}")
+print(f"{mensaje}")
+print(f"Total a pagar: ${total_final}")
+
+if total > 25000:
+    print("¡Tus entradas son gratis!")
